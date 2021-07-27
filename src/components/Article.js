@@ -6,7 +6,7 @@ function Article({ data }) {
       <small className="article_date d-block">{date}</small>
       <a
         href="https://hackernoon.com/css-basics-how-to-take-a-control-gm6k3vxd"
-        class="article_title text-black"
+        className="article_title text-black"
         target="blank"
       >
         {title}

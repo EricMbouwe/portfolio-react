@@ -12,11 +12,6 @@ body {
   margin: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 *,
 *::after,
 *::before {
@@ -140,6 +135,8 @@ main::before {
 }
 
 aside {
+  /* font-family: 'Open sans', sans-serif; */
+  font-weight: 300;
   flex-basis: 60%;
   background-color: #e8e9eb;
 }
