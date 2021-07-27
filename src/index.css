@@ -264,7 +264,7 @@ section {
 }
 
 .form__wrapper #loader {
-  display: none;
+  /* display: none; */
   font-size: inherit;
   opacity: 0.8;
   margin-left: 0.5rem;
@@ -284,7 +284,6 @@ section {
 }
 
 .form__wrapper .submit-status {
-  display: none;
   border: 1px solid #eee;
   border-radius: 5px;
   padding: 0.5rem;
