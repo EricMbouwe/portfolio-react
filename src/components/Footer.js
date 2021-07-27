@@ -11,7 +11,7 @@ function Footer() {
         'template_ywk08vq',
         e.target,
         'user_ZAXv29kjr2dMbSkCO1CpC',
-      )
+      ) 
       .then(
         (result) => {
           console.log(result.text);
@@ -94,7 +94,7 @@ function Footer() {
             href="https://icons8.com/icon/13930/linkedin"
             className="text-white"
           >
-            Design by Charlie Waite
+            Le Consultant
           </a>
         </small>
       </div>
