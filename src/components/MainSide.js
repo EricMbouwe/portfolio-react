@@ -59,8 +59,7 @@ function MainSide() {
                 title="Download resume"
                 download
               >
-                {/* <FontAwesomeIcon icon={['fab', 'file']} /> */}
-                {/* <i className="fa fa-file-text" aria-hidden="true" /> */}
+                <FontAwesomeIcon icon="file-download" />
               </a>
             </li>
           </ul>

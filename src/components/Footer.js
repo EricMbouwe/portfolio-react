@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 function Footer() {
   return (
     <footer>
@@ -20,8 +22,8 @@ function Footer() {
                 id="name"
                 aria-describedby="namelHelp"
               />
-              <i className="fa fa-check-circle" />
-              <i className="fa fa-exclamation-circle" />
+              <FontAwesomeIcon icon="check-circle" />
+              <FontAwesomeIcon icon="exclamation-circle" />
               <small className="error-message">Error message</small>
             </div>
             <div className="form-group">
@@ -33,8 +35,8 @@ function Footer() {
                 id="email"
                 aria-describedby="emailHelp"
               />
-              <i className="fa fa-check-circle" />
-              <i className="fa fa-exclamation-circle" />
+              <FontAwesomeIcon icon="check-circle" />
+              <FontAwesomeIcon icon="exclamation-circle" />
               <small className="error-message">Error message</small>
             </div>
             <div className="form-group">
@@ -46,13 +48,14 @@ function Footer() {
                 rows={4}
                 defaultValue={''}
               />
-              <i className="fa fa-check-circle" />
-              <i className="fa fa-exclamation-circle" />
+              <FontAwesomeIcon icon="check-circle" />
+              <FontAwesomeIcon icon="exclamation-circle" />
               <small className="error-message">Error message</small>
             </div>
             <button type="submit" className="hello-btn w-100 border-0 mt-3">
               Send
               <span id="loader">
+                <FontAwesomeIcon icon="spinner" />
                 <i className="fa fa-refresh" aria-hidden="true" />
               </span>
             </button>
