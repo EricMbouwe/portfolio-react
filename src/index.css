@@ -75,7 +75,7 @@ main::before {
   right: 0;
   left: 0;
   bottom: 0;
-  /* background-image: url(./assets/images/profile_pic.jpg); */
+  /* background-image: url(./pubic/assets/images/profile_pic.jpg); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

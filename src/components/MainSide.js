@@ -24,11 +24,11 @@ function MainSide() {
                     <span className="keyword">
                         <b>React</b>
                     </span>
-                    <span className="keyword">|</span>
+                    <span className="keyword"> | </span>
                     <span className="keyword">
                         <b>Ruby on Rails</b>
                     </span>
-            . I am enthusiastic and a good team player.
+            . I am a clean code enthusiastic and a good team player.
             <br />
             Follow my work below
           </p>
