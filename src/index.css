@@ -95,7 +95,6 @@ main::before {
 }
 
 .social-links .file {
-  font-size: 1.45rem;
   align-self: center;
 }
 
@@ -231,19 +230,19 @@ section {
   border-color: #e74c3c;
 } */
 
-.form-group i {
+.form-group svg {
   visibility: hidden;
   position: absolute;
   top: 11px;
   right: 12px;
 }
 
-.form-group.success i.fa-check-circle {
+.form-group.success svg.fa-check-circle {
   color: #2ecc71;
   visibility: visible;
 }
 
-.form-group.error i.fa-exclamation-circle {
+.form-group.error svg.fa-exclamation-circle {
   color: #e74c3c;
   visibility: visible;
 }
@@ -271,7 +270,7 @@ section {
   margin-left: 0.5rem;
 }
 
-.form__wrapper #loader i {
+.form__wrapper #loader svg {
   animation: spin 2s linear infinite;
 }
 
