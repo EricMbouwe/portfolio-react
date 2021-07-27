@@ -1,9 +1,11 @@
-import './App.css';
+import MainSide from './components/MainSide';
+import ScrollSide from './components/ScrollSide';
 
 function App() {
   return (
-    <div className="App">
-      Hello
+    <div className="d-lg-flex">
+      <MainSide />
+      <ScrollSide />
     </div>
   );
 }
