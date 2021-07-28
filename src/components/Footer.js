@@ -9,14 +9,14 @@ function Footer() {
     comment: '',
   });
 
+  const [statusOnFormSubmit, setStatusOnFormSubmit] = useState('');
+  const [checkingInputs, setCheckingInputs] = useState(false);
   const [errorName, setErrorForName] = useState(false);
+  const [errorComment, setErrorForComment] = useState(false);
   const [errorEmail, setErrorForEmail] = useState({
     invalid: false,
     blank: false,
   });
-  const [errorComment, setErrorForComment] = useState(false);
-  const [statusOnFormSubmit, setStatusOnFormSubmit] = useState('');
-  const [checkingInputs, setCheckingInputs] = useState(false);
 
   function handleChange(e) {
     const value = e.target.value.trim();
