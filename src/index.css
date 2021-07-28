@@ -86,7 +86,6 @@ main::before {
 .description {
   margin: 2.2rem 0;
   font-size: 15px;
-  letter-spacing: 1px;
 }
 
 .social-links li {
@@ -186,7 +185,6 @@ section {
 
 .project-desc p {
   font-size: 15px;
-  letter-spacing: 1px;
 }
 
 .project-links {
