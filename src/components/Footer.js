@@ -9,6 +9,7 @@ function Footer() {
     comment: '',
   });
 
+  const [success, setSuccess] = useState(false);
   const [statusOnFormSubmit, setStatusOnFormSubmit] = useState('');
   const [checkingInputs, setCheckingInputs] = useState(false);
   const [errorName, setErrorForName] = useState(false);
@@ -96,26 +97,23 @@ function Footer() {
         )
         .then(
           function () {
-            setTimeout(() => {
-              setStatusOnFormSubmit('Thanks, your message has been sent!');
-            }, 1100);
+            setStatusOnFormSubmit('Thanks, your message has been sent!');
 
             resetForm();
+            setSuccess(true);
             console.log('SUCCESS!');
           },
           function (error) {
-            setTimeout(() => {
-              setStatusOnFormSubmit('Oups, your message has not been sent!');
-            }, 1100);
+            setStatusOnFormSubmit('Oups, your message has not been sent!');
+            setSuccess(false);
             console.log('FAILED...', error);
           },
         );
     } else {
-      setTimeout(() => {
-        setStatusOnFormSubmit(
-          'Sorry, one or more fields have an error. Please check and try again.',
-        );
-      }, 1100);
+      setStatusOnFormSubmit(
+        'Sorry, one or more fields have an error. Please check and try again.',
+      );
+      setSuccess(false);
       console.log('Errors in the form');
     }
   }
@@ -144,7 +142,7 @@ function Footer() {
             <FontAwesomeIcon icon="check-circle" />
             <FontAwesomeIcon icon="exclamation-circle" />
             <small className="error-message">
-              {errorName && <> Name can't be blank</>}
+              {errorName && !checkingInputs && <> Name can't be blank</>}
             </small>
           </div>
 
@@ -168,10 +166,12 @@ function Footer() {
             <FontAwesomeIcon icon="check-circle" />
             <FontAwesomeIcon icon="exclamation-circle" />
             <small className="error-message">
-              {errorEmail.blank && <>Email can't be blank</>}
+              {errorEmail.blank && !checkingInputs && <>Email can't be blank</>}
             </small>
             <small className="error-message">
-              {errorEmail.invalid && <>The e-mail address entered is invalid</>}
+              {errorEmail.invalid && !checkingInputs && (
+                <>The e-mail address entered is invalid</>
+              )}
             </small>
           </div>
 
@@ -188,7 +188,7 @@ function Footer() {
             <FontAwesomeIcon icon="check-circle" />
             <FontAwesomeIcon icon="exclamation-circle" />
             <small className="error-message">
-              {errorComment && <>Message can't be blank</>}
+              {errorComment && !checkingInputs && <>Message can't be blank</>}
             </small>
           </div>
 
@@ -200,8 +200,13 @@ function Footer() {
           </button>
         </form>
 
-        {(!checkingInputs && statusOnFormSubmit !== '') && (
-          <div className="submit-status error" id="submitStatus">
+        {!checkingInputs && statusOnFormSubmit !== '' && (
+          <div
+            className={
+              success ? 'submit-status success' : 'submit-status error'
+            }
+            id="submitStatus"
+          >
             <p id="submitStatusText">{statusOnFormSubmit}</p>
           </div>
         )}
