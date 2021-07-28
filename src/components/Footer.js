@@ -201,7 +201,7 @@ function Footer() {
         </form>
 
         {(!checkingInputs && statusOnFormSubmit !== '') && (
-          <div className="submit-status" id="submitStatus">
+          <div className="submit-status error" id="submitStatus">
             <p id="submitStatusText">{statusOnFormSubmit}</p>
           </div>
         )}

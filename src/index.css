@@ -85,7 +85,7 @@ main::before {
 
 .description {
   margin: 2.2rem 0;
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 1px;
 }
 
@@ -99,7 +99,7 @@ main::before {
 }
 
 .articles a {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: #145b90;
 }
@@ -185,7 +185,7 @@ section {
 }
 
 .project-desc p {
-  font-size: 14px;
+  font-size: 15px;
   letter-spacing: 1px;
 }
 
@@ -264,7 +264,6 @@ section {
 }
 
 .form__wrapper #loader {
-  /* display: none; */
   font-size: inherit;
   opacity: 0.8;
   margin-left: 0.5rem;
@@ -300,7 +299,7 @@ section {
 
 .form__wrapper .submit-status #submitStatusText {
   margin: 0;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: 500;
   text-align: center;
 }

@@ -73,7 +73,7 @@ const projects = [
     img: 'assets/images/cryptos.png',
     description: (
       <p>
-        A catalog of information on cryptocurrencies.
+        A catalog of information on cryptocurrencies.{' '}
         <b>Crypto Market Cap & Pricing Data Provided By Nomics</b>. Built with{' '}
         <b>React</b>, <b>SCSS</b> and <b>Redux</b>
       </p>
