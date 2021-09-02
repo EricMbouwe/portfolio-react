@@ -213,7 +213,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom grey-sec text-white text-center p-3">
-        <small>©2018 Eric Mbouwe. </small>
+        <small>©2020 Eric Mbouwe. </small>
         <small>
           <a
             href="https://icons8.com/icon/13930/linkedin"
