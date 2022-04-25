@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import emailjs from 'emailjs-com';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Footer() {
   const [state, setState] = useState({
@@ -8,6 +8,8 @@ function Footer() {
     email: '',
     comment: '',
   });
+
+  const [currentYear, setCurrentYear] = useState(2020)
 
   const [success, setSuccess] = useState(false);
   const [statusOnFormSubmit, setStatusOnFormSubmit] = useState('');
@@ -18,6 +20,11 @@ function Footer() {
     invalid: false,
     blank: false,
   });
+
+  useEffect(() => {
+    const year = getCurrentyear()
+    setCurrentYear(year)
+  }, [])
 
   function handleChange(e) {
     const value = e.target.value.trim();
@@ -31,6 +38,10 @@ function Footer() {
     return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
       email,
     );
+  }
+
+  function getCurrentyear() {
+    return new Date().getFullYear()
   }
 
   function checkInputs() {
@@ -213,7 +224,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom grey-sec text-white text-center p-3">
-        <small>©2020 Eric Mbouwe. </small>
+        <small>©{year} Eric Mbouwe. </small>
         <small>
           <a
             href="https://icons8.com/icon/13930/linkedin"
